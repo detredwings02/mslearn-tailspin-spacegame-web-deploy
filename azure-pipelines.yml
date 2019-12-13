@@ -64,7 +64,7 @@ stages:
 
   - job: BuildDacpac
     pool:
-      vmImage: 'vs2015-win2012r2'
+      vmImage: 'windows-latest'
     steps:
     - task: DotNetCoreCLI@2
       displayName: 'Restore project dependencies'
