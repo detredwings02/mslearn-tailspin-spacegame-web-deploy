@@ -64,7 +64,7 @@ stages:
 
   - job: BuildDacpac
     pool:
-      vmImage: 'Hosted'
+      vmImage: 'vs2015-win2012r2'
     steps:
     - task: DotNetCoreCLI@2
       displayName: 'Restore project dependencies'
@@ -97,7 +97,7 @@ stages:
   jobs:
   - deployment: DBAVerificationScript
     pool:
-      vmImage: 'Hosted'
+      vmImage: 'vs2015-win2012r2'
     variables:
     - group: 'Release'
     environment: 'dbaverificationscript'
@@ -135,7 +135,7 @@ stages:
   jobs:
   - deployment: DBAVerificationApply
     pool:
-      vmImage: 'Hosted'
+      vmImage: 'vs2015-win2012r2'
     variables:
     - group: 'Release'
     environment: 'dbaverificationapply'
