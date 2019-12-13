@@ -158,6 +158,7 @@ stages:
               deployType: 'DacpacTask'
               deploymentAction: 'Publish'
               dacpacFile: '$(Pipeline.Workspace)/dropDacpac/Tailspin.SpaceGame.Database/bin/Debug/Tailspin.SpaceGame.Database.dacpac'
+              AdditionalArguments: '/TargetUser:"$(adminlogin)" /TargetPassword:"$(adminPassword)"'
               ipDetectionMethod: 'AutoDetect'
 
 - stage: 'Dev'
